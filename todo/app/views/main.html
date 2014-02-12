@@ -1,0 +1,27 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-href="#">Home</a></li>
+  </ul>
+  <h3 class="text-muted">todo</h3>
+</div>
+
+<div class="jumbotron">
+  <h1>'Allo, 'Allo!</h1>
+  <p class="lead">
+    A Todo-List
+  </p>
+</div>
+
+<button add-todo-button>Add Todo</button>
+<div clas="row todos">
+  <ul ng-repeat="todo in todos">
+    <li class="todo" ng-model="todo">
+      <span class="todo-title">{{todo.title}}</span>
+      <span class="delete-btn" ng-model="todo" ng-click="removeTodo(todo)">X</span>
+    </li>
+  </ul>
+</div>
+
+<div class="footer">
+  <p>♥ from the Yeoman team</p>
+</div>
