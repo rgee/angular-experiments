@@ -100,4 +100,12 @@ body {
   .todo-list-header {
     margin-top: 0px;
   }
+
+  .todo {
+    margin-bottom: 10px;
+  }
+
+  .todo:last-child {
+    margin-bottom: 0px;
+  }
 }

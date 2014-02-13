@@ -11,6 +11,7 @@ angular.module('todoApp')
         console.log(scope);
         element.bind('click', function() {
           Todos.addTodo(angular.copy(scope.todo));
+          scope.todo = {};
         });
       }
     };
