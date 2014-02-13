@@ -13,6 +13,7 @@ angular.module('todoApp')
       ],
 
       addTodo: function(todo) {
+        todo.dateStamp = new Date().getTime();
         this.todos.push(todo);
         commitToLS(this.todos);
       },

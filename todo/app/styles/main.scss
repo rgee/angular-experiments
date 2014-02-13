@@ -103,9 +103,27 @@ body {
 
   .todo {
     margin-bottom: 10px;
+    transition: 0.3s ease-out all;
   }
 
   .todo:last-child {
     margin-bottom: 0px;
   }
+
+  .todo.ng-enter {
+    opacity: 0;
+  }
+
+  .todo.ng-enter-active {
+    opacity: 1;
+  }
+
+  .todo.ng-leave {
+    opacity: 1;
+  }
+
+  .todo.ng-leave-active {
+    opacity: 0;
+  }
+
 }

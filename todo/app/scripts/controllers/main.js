@@ -3,9 +3,8 @@
 angular.module('todoApp')
   .controller('MainCtrl', function ($scope, Todos) {
     $scope.$on('todos-updated', function() {
-      $scope.$evalAsync(function() {
-        $scope.todos = Todos.todos;
-      });
+      $scope.todos = Todos.todos;
+      !$scope.$$phase && $scope.$digest();
     });
 
 
