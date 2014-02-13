@@ -12,12 +12,12 @@
   </p>
 </div>
 
-<button add-todo-button>Add Todo</button>
-<div clas="row todos">
+<button class="btn btn-default" add-todo-button>Add Todo</button>
+<div class="row todos">
   <ul ng-repeat="todo in todos">
     <li class="todo" ng-model="todo">
       <span class="todo-title">{{todo.title}}</span>
-      <span class="delete-btn" ng-model="todo" ng-click="removeTodo(todo)">X</span>
+      <span class="btn btn-danger btn-delete" ng-model="todo" ng-click="removeTodo(todo)">X</span>
     </li>
   </ul>
 </div>

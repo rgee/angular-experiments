@@ -14,7 +14,7 @@ angular.module('todoApp')
 
       addTodo: function(todo) {
         this.todos.push(todo);
-        commitToLS(this.todos); 
+        commitToLS(this.todos);
       },
 
       removeTodo: function(todo) {

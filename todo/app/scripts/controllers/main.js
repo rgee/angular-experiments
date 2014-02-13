@@ -3,8 +3,9 @@
 angular.module('todoApp')
   .controller('MainCtrl', function ($scope, Todos) {
     $scope.$on('todos-updated', function() {
-      $scope.todos = Todos.todos;
-      $scope.$digest();
+      $scope.$evalAsync(function() {
+        $scope.todos = Todos.todos;
+      });
     });
 
     Todos.loadFromStorage();
