@@ -17,8 +17,8 @@
     <h3 class="todo-list-header">Todo</h3>
     <ul ng-show="todos.length" class="todo-list">
       <li ng-repeat="todo in todos track by $index" class="todo" ng-model="todo">
-        <span class="todo-title">{{todo.title}}</span>
         <span class="btn btn-danger btn-delete" ng-model="todo" ng-click="removeTodo(todo)">X</span>
+        <span class="todo-title">{{todo.title}}</span>
       </li>
     </ul>
     <h6 ng-hide="todos.length">Nothing todo!</h6>
