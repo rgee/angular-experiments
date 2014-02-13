@@ -34,7 +34,7 @@ angular.module('todoApp')
       },
 
       loadFromStorage: function() {
-        this.todos = angular.fromJson(localStorage.getItem('todos'));
+        this.todos = angular.fromJson(localStorage.getItem('todos')) || [];
       }
     };
   });
