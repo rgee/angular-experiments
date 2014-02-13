@@ -10,7 +10,7 @@ angular.module('todoApp')
       link: function postLink(scope, element, attrs) {
         console.log(scope);
         element.bind('click', function() {
-          Todos.addTodo(scope.todo);
+          Todos.addTodo(angular.copy(scope.todo));
         });
       }
     };
