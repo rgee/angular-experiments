@@ -8,11 +8,12 @@ angular.module('todoApp')
       });
     });
 
-    Todos.loadFromStorage();
 
+    Todos.loadFromStorage();
     $scope.todos = Todos.todos;
+    $scope.editingTodo = {};
 
     $scope.removeTodo = function(todo) {
       Todos.removeTodo(todo);
-    }
+    };
   });
